@@ -4,5 +4,15 @@
 #Debugging text to ensure this is being executed.
 echo "Starting the nxlog service."
 
+# Currently we are writing out different types of logs to files for verification and testing
+# purposes. Create those before we start he nxlog container so we don't have to do it manually.
+
+cd /var/log
+touch nxlog_csv_log.txt
+touch nxlog_json_log.txt
+touch nxlog_text_log.txt
+touch nxlog_kv_log.txt
+chgrp nxlog nxlog*.txt
+chmod 664 nxlog*.txt
 #Start the nxlog service.
 /usr/bin/nxlog -f
