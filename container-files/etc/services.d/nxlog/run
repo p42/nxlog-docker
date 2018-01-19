@@ -12,7 +12,8 @@ touch nxlog_csv_log.txt
 touch nxlog_json_log.txt
 touch nxlog_text_log.txt
 touch nxlog_kv_log.txt
-chgrp nxlog nxlog*.txt
+touch nxlog_syslog_log.txt
+chown nxlog:nxlog nxlog*.txt
 chmod 664 nxlog*.txt
 #Start the nxlog service.
 /usr/bin/nxlog -f
