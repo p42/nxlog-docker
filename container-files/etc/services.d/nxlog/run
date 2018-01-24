@@ -15,5 +15,7 @@ touch nxlog_kv_log.txt
 touch nxlog_syslog_log.txt
 chown nxlog:nxlog nxlog*.txt
 chmod 664 nxlog*.txt
+cd /etc/test_files
+chown nxlog:nxlog *.log
 #Start the nxlog service.
 /usr/bin/nxlog -f
